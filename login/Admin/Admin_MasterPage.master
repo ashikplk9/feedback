@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin_MasterPage.master.cs" Inherits="NewFolder1_Admin_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="background-color: #DBDDE0">
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem Text="Account" Value="Account">
+                    <asp:MenuItem Text="Add" Value="Add" NavigateUrl="~/Admin/add_account.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Remove" Value="Remove" 
+                        NavigateUrl="~/Admin/remove_account.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Department" Value="Department">
+                    <asp:MenuItem Text="Add" Value="Add" NavigateUrl="~/Admin/add_dept.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Remove" Value="Remove" 
+                        NavigateUrl="~/Admin/remove_dept.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Questions" Value="Questions">
+                    <asp:MenuItem NavigateUrl="~/Admin/add_qstn.aspx" Text="Add" Value="Add">
+                    </asp:MenuItem>
+                </asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <br />
+        <br />
+    </div>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <p>
+                <br />
+            </p>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <div style="background-color: #DBDDE0">
+        <br />
+    </div>
+    </form>
+    
+</body>
+</html>
